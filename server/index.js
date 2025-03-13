@@ -1,5 +1,8 @@
+const cors = require('cors');
 const express = require('express');
+
 const app = express();
+app.use(cors());
 
 app.get('/calcular/:num1/:operacion/:num2', (req, res) => {
     const num1 = parseFloat(req.params.num1);
